@@ -1,0 +1,26 @@
+@use '../forward.scss' as i;
+
+.nav {
+    @include i.flex(column, center, center, 1.25rem);
+    background-color: lighten(i.$color-black-primary, 3%);
+    padding: 1rem;
+
+    &-btn {
+        padding: 1%;
+        font-family: i.$primary-font;
+        font-weight: 700;
+        font-size: 1rem;
+        text-decoration: underline;
+        color: i.$color-red-light;
+        width: 7rem;
+        background: none;
+        border: none;
+        border-radius: 15px;
+
+        &:hover {
+            background: i.$color-red-lighter;
+            color: darken(i.$color-red-light, 50%);
+            cursor: pointer;
+        }
+    }
+}

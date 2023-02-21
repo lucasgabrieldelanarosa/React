@@ -1,0 +1,9 @@
+@use '../forward.scss' as i;
+
+.main{
+    height: 85vh;
+    background-image: linear-gradient(to right, 
+    i.$color-purple-light, 
+    darken(i.$color-purple-light, 25%),  
+    darken(i.$color-purple-light, 50%));   
+}

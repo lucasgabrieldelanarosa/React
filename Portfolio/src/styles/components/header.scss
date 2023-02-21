@@ -1,0 +1,34 @@
+@use '../forward.scss' as i;
+
+.header{
+    @include i.flex(column, center, center, null);
+    background-color: i.$color-black-primary;
+    height: 15vh;
+
+    aside{
+        width: 100%;
+        @include i.flex(row, center, center, 1rem);
+    }
+
+    &-title{
+        background-image: linear-gradient(to right, i.$color-red-light, darken(i.$color-red-light, 15%));    
+        padding: 2%;
+        background-size: 100%;
+        background-clip: text;
+        -webkit-text-fill-color: transparent; 
+        -moz-text-fill-color: transparent;
+        font-size: 3.125rem;
+        font-family: i.$main-title-font;
+    }
+
+    &-menuBtn{
+        color: darken(i.$color-red-light, 30%);
+        font-size: 1.75rem;
+
+        &:hover{
+            cursor: pointer;
+        }
+    }
+
+}
+
